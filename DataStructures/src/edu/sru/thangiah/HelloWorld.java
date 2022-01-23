@@ -8,7 +8,7 @@ public class HelloWorld {
 	public HelloWorld(String message) {
 		System.out.println(message);
 	}
-	//the main program
+	//the main program!
 	public static void main(String args[]) {
 	
 		HelloWorld hi = new HelloWorld("Hello!");

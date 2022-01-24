@@ -2,6 +2,11 @@ package edu.sru.thangiah.datastructures;
 
 import java.util.Iterator;
 
+/*
+ * A generic array structure with a determined MAXSIZE constant
+ * 
+ */
+
 public class ArrayStructure implements BaseOpsInt{
 	
 	private final int MAXSIZE=100;

@@ -1,5 +1,11 @@
 package edu.sru.thangiah.datastructures.linkedlist;
 
+/*
+ * Generic DoubleLinkedList data structure
+ * Uses head and tail to make bond nodes together
+ * !!! Code needs written for methods included
+ */
+
 public class DoubleLinkedList {
 	
 	private NodeTwoLinks head;

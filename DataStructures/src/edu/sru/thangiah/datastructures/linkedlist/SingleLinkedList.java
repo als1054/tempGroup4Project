@@ -2,10 +2,16 @@ package edu.sru.thangiah.datastructures.linkedlist;
 
 import edu.sru.thangiah.datastructures.linkedlist.NodeOneLink;
 
+
+/*
+ * Generic SingleLinkedList 
+ * Nodes remember the "next" node going down the list
+ */
+
 public class SingleLinkedList {
 	
-	private NodeOneLink head;
-	private NodeOneLink tail;
+	private NodeOneLink head; //points to first
+	private NodeOneLink tail; //points to last
 	private NodeOneLink last;
 	private NodeOneLink first;
 	
@@ -22,8 +28,8 @@ public class SingleLinkedList {
 		return head.getNext() == tail;	// evaluates to true if empty, false if not
 	}
 	
-	/* Assume the pointer "first" in the SinglyList class always points to the first node in the 
-	 * linked list. Write code to create a SinglyLinkedList and add two nodes. 
+	/* Assume the pointer "first" in the SingleList class always points to the first node in the 
+	 * linked list. Write code to create a SingleLinkedList and add two nodes. 
 	 * At each insertion,the pointer  "first"  should point to the last node inserted on the
 	 * linked list. The pointer "first" will always point to the node after the node pointed to by the head.
 	*/

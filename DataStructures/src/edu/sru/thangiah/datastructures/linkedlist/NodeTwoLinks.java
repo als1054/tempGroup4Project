@@ -1,5 +1,10 @@
 package edu.sru.thangiah.datastructures.linkedlist;
 
+/*
+ * NodeTwoLink data structure
+ * A node element used in a DoubleLinkedList that remembers the "next" and "prev" nodes of the same type
+ */
+
 public class NodeTwoLinks {
 	protected Object data;
 	protected NodeTwoLinks prev;

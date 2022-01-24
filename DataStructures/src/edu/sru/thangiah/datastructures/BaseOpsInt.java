@@ -1,9 +1,10 @@
 package edu.sru.thangiah.datastructures;
 
-
 /*
- * Baseops interface class
+ * BaseOps interface class
+ * 
  */
+
 public interface BaseOpsInt {
 	
 	//size of the structure

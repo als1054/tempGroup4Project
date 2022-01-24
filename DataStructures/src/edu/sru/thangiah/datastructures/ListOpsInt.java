@@ -1,5 +1,10 @@
 package edu.sru.thangiah.datastructures;
 
+/*
+ * ListOps interface class
+ * 
+ */
+
 public interface ListOpsInt extends BaseOpsInt {
 	
 	//add it to the first location structure

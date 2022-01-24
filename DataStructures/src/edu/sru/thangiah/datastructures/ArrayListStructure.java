@@ -2,6 +2,11 @@ package edu.sru.thangiah.datastructures;
 
 public class ArrayListStructure implements BaseOpsInt{
 
+	/*
+	 * Generic ArrayList will work like a dynamic
+	 * array with no MAXSIZE constant
+	 */
+	
 	@Override
 	public int size() {
 		// TODO Auto-generated method stub

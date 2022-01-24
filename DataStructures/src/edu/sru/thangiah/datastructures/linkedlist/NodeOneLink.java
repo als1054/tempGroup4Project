@@ -1,5 +1,10 @@
 package edu.sru.thangiah.datastructures.linkedlist;
 
+/*
+ * NodeOneLink data structure
+ * A node element used in a singlelinkedlist that remembers the nextElement as "next"
+ */
+
 public class NodeOneLink {
 	protected Object data;
 	protected NodeOneLink next;

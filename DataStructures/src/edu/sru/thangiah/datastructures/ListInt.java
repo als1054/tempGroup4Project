@@ -1,5 +1,10 @@
 package edu.sru.thangiah.datastructures;
 
+/*
+ * List interface class
+ * 
+ */
+
 public interface ListInt extends BaseOpsInt{
 	
 	public boolean addFirst(Object value);

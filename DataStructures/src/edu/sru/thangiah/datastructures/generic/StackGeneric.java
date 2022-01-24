@@ -1,5 +1,12 @@
 package edu.sru.thangiah.datastructures.generic;
 
+/*
+ * Stack generic class
+ * Implements pop and push in first in last out order
+ * Generic implementation for use in any data type
+ * !!! Limited by MAXSIZE in size, 
+ */
+
 public class StackGeneric <T> implements AbstractStackGenInt <T>{
 	private final int MAXSIZE=50;
 	private Object[] arrayVal;

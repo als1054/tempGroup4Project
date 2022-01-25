@@ -2,7 +2,9 @@ package edu.sru.thangiah.inheritance;
 
 
 /*
- * is-a or ako - association
+ * Example of is-a or ako - association
+ * - Basic inheritance is based on an is-a association.
+ * - Drawing is a form of art, and a cartoon is a form of drawing.
  */
 class Art{
 	

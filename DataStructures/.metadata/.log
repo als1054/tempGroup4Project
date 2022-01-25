@@ -1,0 +1,29 @@
+
+!ENTRY org.eclipse.core.resources 2 2 2022-01-25 15:45:10.012
+!MESSAGE Save operation warnings.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2022-01-25 15:45:10.013
+!MESSAGE The project description file (.project) for '.org.eclipse.egit.core.cmp' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+
+!ENTRY org.eclipse.equinox.security 1 0 2022-01-25 17:44:09.206
+!MESSAGE New keyring password generated. 
+
+!ENTRY org.eclipse.egit.core 4 0 2022-01-25 17:44:38.382
+!MESSAGE An exception occurred during push on URI https://github.com/als1054/tempGroup4Project.git: https://github.com/als1054/tempGroup4Project.git: not authorized
+!STACK 0
+org.eclipse.jgit.api.errors.TransportException: https://github.com/als1054/tempGroup4Project.git: not authorized
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:147)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:217)
+	at org.eclipse.egit.ui.internal.push.PushJob.performJob(PushJob.java:86)
+	at org.eclipse.egit.ui.internal.jobs.RepositoryJob.run(RepositoryJob.java:59)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.jgit.errors.TransportException: https://github.com/als1054/tempGroup4Project.git: not authorized
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:685)
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:627)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:541)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:127)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1384)
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:137)
+	... 4 more
+
+!ENTRY org.eclipse.egit.ui 4 0 2022-01-25 17:44:38.392
+!MESSAGE Can't connect to any repository: https://github.com/als1054/tempGroup4Project.git (https://github.com/als1054/tempGroup4Project.git: not authorized)

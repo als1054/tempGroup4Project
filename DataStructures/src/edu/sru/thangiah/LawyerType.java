@@ -64,7 +64,10 @@ public class LawyerType {
 
 	public static void main(String args[])
 	{
-	
+		Lawyer badLawyer = new Lawyer(" Sub-Supreme Leader", 3000.0F, 10);
+		badLawyer.setRate(5000);
+		badLawyer.getBillingAmount();
+		Lawyer worseLawyer = new Lawyer(" Ex-Supreme Leader", 10000.0F, 100000);
 		
 	}
 }

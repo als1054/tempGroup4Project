@@ -3,6 +3,12 @@ package edu.sru.thangiah.datastructures;
 /*
  * BaseOps interface class
  * 
+ * We use interface classes to lay a framework for other classes
+ * which intend to inherit the base traits of this class. Since
+ * each instance will have different methods based on the data structure
+ * we do not write the body of the function, instead when the class inherits
+ * baseopsint it is required to write the core functions.
+ * 
  */
 
 public interface BaseOpsInt {

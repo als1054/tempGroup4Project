@@ -9,7 +9,10 @@ public class GoodbyeWorld {
 	}
 	
 	
-	//main
+	/*since our constructor in the GoodByeWorld class contains a println statement
+	* when we instantiate an instance of our class the constructor fires the println statement
+	* resulting in the "Goodbye World" output
+	*/
 	public static void main(String args[])
 	{
 		

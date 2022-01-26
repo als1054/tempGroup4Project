@@ -2,7 +2,10 @@ package edu.sru.thangiah.inheritance;
 
 
 /*
- * part-of - composition
+ * Example of composition (part-of relationship)
+ * -The child class is part of the parent class
+ * -A car is the parent class and the engine is the engine class
+ * 	-In the car example it wouldn't make sense to have the engine without the car
  */
 
 class Engine {

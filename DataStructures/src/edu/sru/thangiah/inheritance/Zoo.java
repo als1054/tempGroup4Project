@@ -7,6 +7,8 @@ package edu.sru.thangiah.inheritance;
 
 /*
  * Another example of is-a or ako - association
+ * - Basic inheritance is based on an is-a association.
+ * - We have a core animal class, in which other specific animals (cat, dog, etc) inherit from.
  */
 
 class Animal

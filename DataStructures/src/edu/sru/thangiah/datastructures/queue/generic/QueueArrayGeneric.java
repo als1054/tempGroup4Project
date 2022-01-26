@@ -1,5 +1,9 @@
 package edu.sru.thangiah.datastructures.queue.generic;
-
+/*
+ * Generic implementation of a queue inheriting the AbstractQueueGeneric class
+ * 
+ * 
+ */
 public class QueueArrayGeneric<T> extends AbstractQueueGeneric<T> {
 		private Object items[];
 		private int count;

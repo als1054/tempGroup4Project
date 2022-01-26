@@ -1,5 +1,10 @@
 package edu.sru.thangiah.datastructures.vector;
 
+/*
+ * Vector structure constructed to fill backwards, starting at MAXSIZE-1 and
+ * filling from back to front
+ * Allows shifting when values are inserted, good first step for queues and stacks
+ */
 public class ReverseVectorStructure {
 	private final int MAXSIZE = 100;
 	private int arrayVal[];
@@ -11,21 +16,21 @@ public class ReverseVectorStructure {
 		count = MAXSIZE-1;     
 	}
 	
-	public boolean isEmpty() {
+	public boolean isEmpty() {//checks if vector is empty
 		if (count == (MAXSIZE-1)) {
 			return true;
 		}
 		return false;
 	}
 
-	public boolean isFull() {
+	public boolean isFull() {//checks if vector is full
 		if (count == -1) {
 			return true;
 		}
 		return false;
 	}
 
-	public boolean add(int value) {
+	public boolean add(int value) { //adds a value to vector if not full
 		if (!this.isFull()) {
 			arrayVal[count] = value;
 			count--;
@@ -34,7 +39,7 @@ public class ReverseVectorStructure {
 		return false;
 	}
 
-	public boolean remove() {
+	public boolean remove() { //removes value if vector is not empty
 		if (!this.isEmpty()) {
 			count++;
 			return true;
@@ -42,7 +47,7 @@ public class ReverseVectorStructure {
 		return false;
 	}
 	
-	int setAtIndex(int i, int value) {
+	int setAtIndex(int i, int value) { //sets a value at a specific index
 		if (i >= 0 && i < this.MAXSIZE) {
 			if (this.isEmpty()) // vector is empty
 			{

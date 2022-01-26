@@ -1,5 +1,10 @@
 package edu.sru.thangiah.datastructures.queue;
 import edu.sru.thangiah.datastructures.linkedlist.*;
+/*
+ * Demonstrates the fundamentals of a queue instead using a linked list instead of an array.
+ * DeQueue and EnQueue operations require little complexity since the operations merely result in moving the internal pointers.
+ */
+
 
 public class QueueLinkedList extends AbstractQueue{
 

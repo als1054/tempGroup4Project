@@ -1,5 +1,13 @@
 package edu.sru.thangiah.datastructures.queue.generic;
 
+import edu.sru.thangiah.datastructures.generic.ListOpsIntGeneric;
+
+/*
+ * Generic interface class used for a queue implementation. Note the <> after the class declaration, specifying the generic type variable
+ * used throughout the method declaration. The use of an abstract class allows for the programmer to choose certain methods from the
+ * inherited class to implement.
+ */
+
 public abstract class AbstractQueueGeneric<T> implements ListOpsIntGeneric<T> {
 
 	@Override

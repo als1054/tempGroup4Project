@@ -1,7 +1,11 @@
 package edu.sru.thangiah.inheritance;
 
 /*
- * Aggregation
+ * Example of aggregation (has-a relationship)
+ * - The fundamental idea behind aggregation is asking whether
+ * the child class can exist independently of the parent class
+ * - In this type of inheritance the class constructor instantiates other child classes
+ * - A department has faculty, staff, and students.
  */
 
 class Student {

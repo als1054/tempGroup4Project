@@ -6,11 +6,7 @@ package edu.sru.thangiah;
 
 public class BankAccount {
 	
-	private float amt;  //data-hiding
-	
-	/*
-	 * 
-	 */
+	private float amt;  //data-hidin
 	
 	//default constructor. Bank amount is default set to 100
 	BankAccount()

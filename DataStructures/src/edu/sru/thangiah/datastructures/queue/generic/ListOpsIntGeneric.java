@@ -1,5 +1,7 @@
 package edu.sru.thangiah.datastructures.queue.generic;
 
+import edu.sru.thangiah.datastructures.generic.BaseOpsIntGeneric;
+
 public interface ListOpsIntGeneric<T> extends BaseOpsIntGeneric<T> {
 	
 	public boolean addFirst(T value);

@@ -2,6 +2,10 @@ package edu.sru.thangiah.datastructures.queue;
 
 import java.util.Vector;
 
+
+/*
+ * Allows us 
+ */
 public class QueueVector extends AbstractQueue{
 	
 	private final int  MAXSIZE=100;

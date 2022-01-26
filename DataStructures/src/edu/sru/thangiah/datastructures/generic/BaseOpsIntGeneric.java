@@ -1,5 +1,8 @@
-package edu.sru.thangiah.datastructures.queue.generic;
-
+package edu.sru.thangiah.datastructures.generic;
+/*
+ * Generic implementation for the base ops int class to be used for future generic data structures
+ * Future todo: move BaseOpsIntGeneric and ListOpsIntGeneric into edu.sru.thangiah.datastructures.generic
+ */
 public interface BaseOpsIntGeneric<T> {
 	
 	//Get the size

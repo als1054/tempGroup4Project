@@ -1,4 +1,4 @@
-package edu.sru.thangiah.datastructures.queue.generic;
+package edu.sru.thangiah.datastructures.generic;
 
 public interface ListOpsIntGeneric<T> extends BaseOpsIntGeneric<T> {
 	

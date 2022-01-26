@@ -4,7 +4,6 @@ package edu.sru.thangiah.datastructures.queue;
  * Queue implementation using an array. Elements are inserted and removed in a FIFO( first-in-first-out) manner
  * as elements enter in the container they are figuratively assigned a "priority" in which the first element to
  * enter will be the first to leave.
- * 
  * The fundamentals of an array require a size to be initialized during instantiation of the container, which we will later
  * overcome by using a dynamic data structure such as a vector.
  */

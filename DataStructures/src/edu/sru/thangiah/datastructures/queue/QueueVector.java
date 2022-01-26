@@ -2,6 +2,12 @@ package edu.sru.thangiah.datastructures.queue;
 
 import java.util.Vector;
 
+
+/*
+ * Allows us to dynamically allocate the size of our queue, removing the size restriction
+ * associated with arrays. Additionally since we make use of java.util.Vector we don't need
+ * to build too many helper methods since they are already built into the Vector package.
+ */
 public class QueueVector extends AbstractQueue{
 	
 	private final int  MAXSIZE=100;

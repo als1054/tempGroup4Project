@@ -88,13 +88,23 @@ public class SingleLinkedListGeneric <T> implements ListOpsIntGeneric <T> {
 	}
 
 	@Override
-	public int setAtIndex(int i, T value) {
+	public T removeAtIndex(int i) {
 		// TODO Auto-generated method stub
-		return 0;
+		return null;
+	}
+
+	public T getAtIndex(int i) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override
-	public T removeAtIndex(int i) {
+	public T setAtIndex(int i, T value) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public T addAtIndex(int i, T value) {
 		// TODO Auto-generated method stub
 		return null;
 	}

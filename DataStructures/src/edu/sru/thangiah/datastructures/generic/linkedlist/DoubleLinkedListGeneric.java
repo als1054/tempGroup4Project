@@ -88,15 +88,29 @@ public class DoubleLinkedListGeneric <T> implements ListOpsIntGeneric <T>  {
 	}
 
 	@Override
-	public int setAtIndex(int i, T value) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
 	public T removeAtIndex(int i) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	public T getAtIndex(int i) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public T setAtIndex(int i, T value) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public T addAtIndex(int i, T value) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public static void main(String[] args) {
+		
+	}
 }

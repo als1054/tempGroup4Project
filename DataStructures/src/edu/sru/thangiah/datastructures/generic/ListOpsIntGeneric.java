@@ -14,8 +14,15 @@ public interface ListOpsIntGeneric<T> extends BaseOpsIntGeneric<T> {
 	
 	public T removeLast();
 	
-	public int setAtIndex(int i, T value);
+	public int indexOf (T value);
+	
+	public T getAtIndex(int i);
+	
+	public T setAtIndex(int i, T value);
 	
 	public T removeAtIndex (int i);
-
+	
+	public T addAtIndex (int i, T value);
+	
+	
 }

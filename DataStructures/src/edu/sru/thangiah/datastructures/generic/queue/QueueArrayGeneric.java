@@ -80,6 +80,17 @@ public class QueueArrayGeneric<T> extends AbstractQueueGeneric<T> {
 			}
 			return temp;
 		}
+		@Override
+		public T getAtIndex(int i) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+
+		@Override
+		public T addAtIndex(int i, T value) {
+			// TODO Auto-generated method stub
+			return null;
+		}
 		
 		public static void main(String[] args) {
 			// Testing from provided "Data" file
@@ -166,5 +177,6 @@ public class QueueArrayGeneric<T> extends AbstractQueueGeneric<T> {
 			}
 			System.out.println(test);
 		}
+
 	}
 

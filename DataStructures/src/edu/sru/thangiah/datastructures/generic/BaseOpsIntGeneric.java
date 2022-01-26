@@ -6,7 +6,7 @@ package edu.sru.thangiah.datastructures.generic;
 public interface BaseOpsIntGeneric<T> {
 	
 	//Get the size
-	int size();
+	public int size();
 	
 	//is it empty
 	public boolean isEmpty();

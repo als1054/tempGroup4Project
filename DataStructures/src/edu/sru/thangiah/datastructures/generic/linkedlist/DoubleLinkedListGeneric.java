@@ -1,14 +1,7 @@
-package edu.sru.thangiah.datastructures.queue.generic;
+package edu.sru.thangiah.datastructures.generic.linkedlist;
+import edu.sru.thangiah.datastructures.generic.*;
 
-import edu.sru.thangiah.datastructures.generic.ListOpsIntGeneric;
-
-/*
- * Generic interface class used for a queue implementation. Note the <> after the class declaration, specifying the generic type variable
- * used throughout the method declaration. The use of an abstract class allows for the programmer to choose certain methods from the
- * inherited class to implement.
- */
-
-public abstract class AbstractQueueGeneric<T> implements ListOpsIntGeneric<T> {
+public class DoubleLinkedListGeneric <T> implements ListOpsIntGeneric <T>  {
 
 	@Override
 	public int size() {
@@ -17,10 +10,16 @@ public abstract class AbstractQueueGeneric<T> implements ListOpsIntGeneric<T> {
 	}
 
 	@Override
-	public abstract boolean isEmpty();
+	public boolean isEmpty() {
+		// TODO Auto-generated method stub
+		return false;
+	}
 
 	@Override
-	public abstract boolean isFull();
+	public boolean isFull() {
+		// TODO Auto-generated method stub
+		return false;
+	}
 
 	@Override
 	public boolean clear() {
@@ -35,16 +34,17 @@ public abstract class AbstractQueueGeneric<T> implements ListOpsIntGeneric<T> {
 	}
 
 	@Override
-	public boolean add(T value){
+	public boolean add(T value) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public T remove(){
+	public T remove() {
 		// TODO Auto-generated method stub
-		return (T)Integer.valueOf(-1);
+		return null;
 	}
+
 	@Override
 	public int indexOf(T value) {
 		// TODO Auto-generated method stub
@@ -58,27 +58,33 @@ public abstract class AbstractQueueGeneric<T> implements ListOpsIntGeneric<T> {
 	}
 
 	@Override
-	public abstract boolean addLast(T value);
-
-	@Override
-	public T getFirst(){
+	public boolean addLast(T value) {
 		// TODO Auto-generated method stub
-		return (T)Integer.valueOf(-1);
+		return false;
 	}
 
 	@Override
-	public T getLast(){
+	public T getFirst() {
 		// TODO Auto-generated method stub
-		return (T)Integer.valueOf(-1);
+		return null;
 	}
 
 	@Override
-	public abstract T removeFirst();
+	public T getLast() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public T removeFirst() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 	@Override
 	public T removeLast() {
 		// TODO Auto-generated method stub
-		return (T)Integer.valueOf(-1);
+		return null;
 	}
 
 	@Override
@@ -90,7 +96,7 @@ public abstract class AbstractQueueGeneric<T> implements ListOpsIntGeneric<T> {
 	@Override
 	public T removeAtIndex(int i) {
 		// TODO Auto-generated method stub
-		return (T)Integer.valueOf(-1);
+		return null;
 	}
 
 }

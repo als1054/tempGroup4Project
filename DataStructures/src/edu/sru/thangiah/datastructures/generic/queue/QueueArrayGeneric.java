@@ -1,4 +1,4 @@
-package edu.sru.thangiah.datastructures.queue.generic;
+package edu.sru.thangiah.datastructures.generic.queue;
 /*
  * Generic implementation of a queue inheriting the AbstractQueueGeneric class
  * 

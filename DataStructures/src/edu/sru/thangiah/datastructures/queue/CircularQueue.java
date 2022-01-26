@@ -2,6 +2,14 @@ package edu.sru.thangiah.datastructures.queue;
 
 import java.util.Vector;
 
+/*
+ * A circular queue is a data structure in which the last position in the queue
+ * is linked to the first position hence the circular nature. With a normal queue
+ * we may run into issues of maximizing our queue's capacity since elements de-queued
+ * are left uninitialized and still take up space in the queue.
+ * The usefulness of a circular queue solves this issue since we always have a pointer
+ * to the front and rear of the container.
+ */
 public class CircularQueue extends AbstractQueue{
 	
 	private final int MAXSIZE = 5;

@@ -28,6 +28,9 @@ public interface ListOpsInt extends BaseOpsInt {
 	//remove the first value of the structure
 	public int removeFirst();
 	
+	
+	//public int removeLast();
+	
 	//get the value at index i
 	public int getAtIndex(int i);
 	
@@ -36,5 +39,8 @@ public interface ListOpsInt extends BaseOpsInt {
 	
 	//remove the value at index i
 	public int removeAtIndex(int i);
+	
+	
+	//public int addAtIndex(int i);
 	
 }

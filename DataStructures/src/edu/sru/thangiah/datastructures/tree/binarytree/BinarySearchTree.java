@@ -1,5 +1,10 @@
 package edu.sru.thangiah.datastructures.tree.binarytree;
 
+/*
+ * Binary tree made up of BinaryTreeNode nodes
+ * Left child is smaller than root node, right child is larger than root node
+ */
+
 public class BinarySearchTree extends AbstractTree{
 	// root of the tree
 	private BinaryTreeNode root;

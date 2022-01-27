@@ -139,4 +139,10 @@ public class StackLinkedList extends AbstractStack{
 		return 0;
 	}
 
+	@Override
+	public int addAtIndex(int i, int value) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }

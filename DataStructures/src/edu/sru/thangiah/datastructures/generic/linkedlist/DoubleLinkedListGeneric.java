@@ -1,5 +1,6 @@
 package edu.sru.thangiah.datastructures.generic.linkedlist;
 import edu.sru.thangiah.datastructures.generic.*;
+import edu.sru.thangiah.datastructures.generic.linkedlist.NodeTwoLinksGeneric;
 
 public class DoubleLinkedListGeneric <T> implements ListOpsIntGeneric <T>  {
 

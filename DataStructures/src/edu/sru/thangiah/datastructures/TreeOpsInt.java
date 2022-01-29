@@ -1,6 +1,4 @@
-package edu.sru.thangiah.datastructures.tree.binarytree;
-
-import edu.sru.thangiah.datastructures.*;
+package edu.sru.thangiah.datastructures;
 
 public interface TreeOpsInt extends  BaseOpsInt{
 	

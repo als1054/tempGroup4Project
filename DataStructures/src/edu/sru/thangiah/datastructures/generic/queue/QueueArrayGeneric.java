@@ -1,4 +1,4 @@
-package edu.sru.thangiah.datastructures.queue.generic;
+package edu.sru.thangiah.datastructures.generic.queue;
 /*
  * Generic implementation of a queue inheriting the AbstractQueueGeneric class
  * 
@@ -79,6 +79,17 @@ public class QueueArrayGeneric<T> extends AbstractQueueGeneric<T> {
 				temp += items[i] + " ";
 			}
 			return temp;
+		}
+		@Override
+		public T getAtIndex(int i) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+
+		@Override
+		public T addAtIndex(int i, T value) {
+			// TODO Auto-generated method stub
+			return null;
 		}
 		
 		public static void main(String[] args) {
@@ -166,5 +177,6 @@ public class QueueArrayGeneric<T> extends AbstractQueueGeneric<T> {
 			}
 			System.out.println(test);
 		}
+
 	}
 

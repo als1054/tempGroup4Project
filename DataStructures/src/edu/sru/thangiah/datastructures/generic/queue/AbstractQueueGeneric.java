@@ -1,4 +1,4 @@
-package edu.sru.thangiah.datastructures.queue.generic;
+package edu.sru.thangiah.datastructures.generic.queue;
 
 import edu.sru.thangiah.datastructures.generic.ListOpsIntGeneric;
 
@@ -82,9 +82,9 @@ public abstract class AbstractQueueGeneric<T> implements ListOpsIntGeneric<T> {
 	}
 
 	@Override
-	public int setAtIndex(int i, T value) {
+	public T setAtIndex(int i, T value) {
 		// TODO Auto-generated method stub
-		return 0;
+		return null;
 	}
 
 	@Override

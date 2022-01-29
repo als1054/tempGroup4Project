@@ -1,4 +1,6 @@
-package edu.sru.thangiah.datastructures.generic;
+package edu.sru.thangiah.datastructures.generic.stack;
+
+import edu.sru.thangiah.datastructures.generic.AbstractStackGenInt;
 
 /*
  * Stack generic class

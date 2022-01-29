@@ -137,6 +137,12 @@ public class CircularQueue extends AbstractQueue{
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	public int addAtIndex(int i, int value) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 }
 
 

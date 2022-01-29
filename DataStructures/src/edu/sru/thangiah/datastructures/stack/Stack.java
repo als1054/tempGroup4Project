@@ -94,6 +94,12 @@ public class Stack extends AbstractStack{
 			return false;
 		}
 
+		@Override
+		public int addAtIndex(int i, int value) {
+			// TODO Auto-generated method stub
+			return 0;
+		}
+
 	
 		
 		

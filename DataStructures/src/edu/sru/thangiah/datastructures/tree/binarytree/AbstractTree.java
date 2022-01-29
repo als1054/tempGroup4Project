@@ -1,5 +1,7 @@
 package edu.sru.thangiah.datastructures.tree.binarytree;
 
+import edu.sru.thangiah.datastructures.TreeOpsInt;
+
 public abstract class AbstractTree implements TreeOpsInt{
 	
 	@Override

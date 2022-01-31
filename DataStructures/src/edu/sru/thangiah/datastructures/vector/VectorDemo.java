@@ -1,6 +1,10 @@
 package edu.sru.thangiah.datastructures.vector;
 import java.util.*;
 
+/*
+ * Very simple demonstration of using vector
+ */
+
 public class VectorDemo {
 	public static void main (String args[]) {
 		
@@ -11,7 +15,7 @@ public class VectorDemo {
 		
 		for (int i = 0; i<maxSize; i++)
 		{
-			vect.addElement(i);
+			vect.addElement(i); //adds i to vect
 		}
 		for (int j = 0; j<vect.size(); j++)
 		{

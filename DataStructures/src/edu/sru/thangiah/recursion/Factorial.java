@@ -1,5 +1,9 @@
 package edu.sru.thangiah.recursion;
 
+/*
+ * Factorial demonstrates recursion calling itself and decreasing the count until 0
+ */
+
 public class Factorial {
 
 	static int factorial(int n) {

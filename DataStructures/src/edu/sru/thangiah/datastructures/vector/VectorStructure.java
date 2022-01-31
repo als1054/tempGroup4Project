@@ -3,6 +3,11 @@ import java.util.Vector;
 
 import edu.sru.thangiah.datastructures.BaseOpsInt;
 
+/*
+ * Vector structure expands on BaseOps and builds vector
+ * tool for effective use with arrays
+ */
+
 public class VectorStructure implements BaseOpsInt{
 	
 	private final int MAXSIZE = 100;

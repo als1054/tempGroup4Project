@@ -317,9 +317,9 @@ public class DoubleLinkedList {
 		 singleLL.addNodeLast("a");
 		 singleLL.addNodeLast("b");
 		 System.out.println(singleLL);
-		 */
 		 
-		 /*DoubleLinkedList doubleLL = new DoubleLinkedList();		 
+		 
+		 DoubleLinkedList doubleLL = new DoubleLinkedList();		 
 		 doubleLL.addNodeFirst("a");
 		 doubleLL.addNodeFirst("b");
 		 doubleLL.addAtIndex(1,"c");
@@ -327,13 +327,15 @@ public class DoubleLinkedList {
 		 System.out.println(doubleLL.removeData("d"));
 		 System.out.println(doubleLL.removeData("b"));
 		 System.out.println(doubleLL);
-		 */
 		 
+		 
+		 */
 		 DoubleLinkedList doubleLL = new DoubleLinkedList();		 
 		 doubleLL.insertAscend(5);
 		 doubleLL.insertAscend(10);
 		 doubleLL.insertAscend(15);
 		 System.out.println(doubleLL);
+		 
 	 }
 	 
 	 

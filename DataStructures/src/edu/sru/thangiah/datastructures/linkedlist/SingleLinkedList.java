@@ -259,13 +259,15 @@ public class SingleLinkedList {
 		 */
 		 
 		 SingleLinkedList singleLL = new SingleLinkedList();
-		 singleLL.addNodeFirst(4);
+		 int i=2;
+		 String j="##332";
+		 singleLL.addNodeFirst(j);
 		 System.out.println(singleLL);
-		 singleLL.addNodeFirst(5);
+		 singleLL.addNodeFirst(i);
 		 System.out.println(singleLL);
 		 singleLL.addNodeFirst(6);
 		 System.out.println(singleLL);
-		 singleLL.delPrev1(4);
+		 singleLL.delPrev1(j);
 		 //singleLL.addNodeFirst("a");
 		 //singleLL.addNodeFirst("b");
 		 System.out.println(singleLL);

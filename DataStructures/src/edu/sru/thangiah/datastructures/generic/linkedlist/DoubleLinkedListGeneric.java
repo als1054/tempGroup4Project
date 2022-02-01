@@ -76,42 +76,6 @@ public class DoubleLinkedListGeneric <T> extends AbstractLinkedListGeneric <T>  
 	   return true;
 	}
 
-	@Override
-	public boolean clear() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean contains(T value) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean add(T value) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public T remove() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public int indexOf(T value) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public boolean addFirst(T value) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
 	public boolean addLast(T data) //This was boolean, but in non generic we returned data?
 	{
 		NodeTwoLinksGeneric temp;
@@ -139,42 +103,39 @@ public class DoubleLinkedListGeneric <T> extends AbstractLinkedListGeneric <T>  
 		
 		return true;
 	}
-
-	@Override
-	public T getFirst() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 	
 	public Object getFirstNode(T data)
 	{
-		//code needs to be written
-		return -1;
+		return head.getNext(); //??
 	}
 	
 	//Get the last value in the linked list without removing it 
 	public Object getLastNode(T data)
 	{
 		//code needs to be written
-		return -1;
-	}
-
-	@Override
-	public T getLast() {
-		// TODO Auto-generated method stub
-		return null;
+		return tail.getPrev(); //? 
 	}
 
 	public Object removeNodeFirst()
 	{
-		//code needs to be written
-		return -1;
-	}
-
-	@Override
-	public T removeLast() {
-		// TODO Auto-generated method stub
-		return null;
+		int data;
+		NodeTwoLinksGeneric temp;
+		data = -1;
+		
+		if (!isEmpty())
+		{
+			//point to first node to be removed
+			temp = head.getNext();
+			data = (int)temp.getData();
+			
+			temp.getNext().setPrev(head);
+			head.setNext(temp.getNext());
+			
+			temp.setNext(null);
+			temp.setPrev(null);
+			temp=null;
+		}
+		return data;
 	}
 	
 	public Object removeLastNode()
@@ -197,23 +158,6 @@ public class DoubleLinkedListGeneric <T> extends AbstractLinkedListGeneric <T>  
 			temp=null;
 		}
 		return data;
-	}
-
-	@Override
-	public T removeAtIndex(int i) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public T getAtIndex(int i) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public T setAtIndex(int i, T value) {
-		// TODO Auto-generated method stub
-		return null;
 	}
 	
 	public T removeData(T data)

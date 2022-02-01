@@ -1,5 +1,7 @@
 package edu.sru.thangiah.datastructures.linkedlist;
 
+import edu.sru.thangiah.datastructures.generic.linkedlist.NodeTwoLinksGeneric;
+
 /*
  * Generic DoubleLinkedList data structure
  * Uses head and tail to make bond nodes together
@@ -41,14 +43,37 @@ public class DoubleLinkedList extends AbstractLinkedList {
 		return false;
 	}
 	
+	public boolean isFull() {
+		if (head.getNext() == tail)
+		{
+			return false;
+		}
+		return true;
+	}
 	
 	/*
 	 * Remove the first node from the linked list
 	 */
 	public Object removeNodeFirst()
 	{
-		//code needs to be written
-		return -1;
+		int data;
+		NodeTwoLinks temp;
+		data = -1;
+		
+		if (!isEmpty())
+		{
+			//point to first node to be removed
+			temp = head.getNext();
+			data = (int)temp.getData();
+			
+			temp.getNext().setPrev(head);
+			head.setNext(temp.getNext());
+			
+			temp.setNext(null);
+			temp.setPrev(null);
+			temp=null;
+		}
+		return data;
 	}
 	
 	/* 
@@ -111,15 +136,13 @@ public class DoubleLinkedList extends AbstractLinkedList {
 	//Get the first value in the linked list without removing it 
 	public Object getFirstNode(Object data)
 	{
-		//code needs to be written
-		return -1;
+		return head.getNext(); //??
 	}
 	
 	//Get the last value in the linked list without removing it 
 	public Object getLastNode(Object data)
 	{
-		//code needs to be written
-		return -1;
+		return tail.getPrev(); //? 
 	}
 	
 	public boolean insertAscend(Object data)

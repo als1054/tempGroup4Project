@@ -10,6 +10,15 @@ public class SingleLinkedListGeneric <T> implements ListOpsIntGeneric <T> {
 	private NodeOneLinkGeneric last;
 	private NodeOneLinkGeneric first;
 	
+	public SingleLinkedListGeneric()
+	{
+		head = new NodeOneLinkGeneric("Head");
+		tail = new NodeOneLinkGeneric("Tail");
+		last = head;
+		first = head;
+		head.setNext(tail);
+	}
+	
 	@Override
 	public int size() {
 		NodeOneLinkGeneric p = new NodeOneLinkGeneric(head.getNext());
@@ -47,9 +56,18 @@ public class SingleLinkedListGeneric <T> implements ListOpsIntGeneric <T> {
 	public boolean contains(T value) {
 		// TODO Auto-generated method stub
 		NodeOneLinkGeneric p = new NodeOneLinkGeneric(head.getNext());
-		while(p.getNext()!=tail || p.getNext().getData()!=value) {
-			p=p.getNext();
+		if(!this.isEmpty()) {
+			if(tail.getData()==value||head.getData()==value) 
+				return true;
+			
+			while(p.getNext()!=tail || p.getNext().getData()!=value) {
+				p=p.getNext();
+				if(p.getData()==value)
+					return true;
+			}
 		}
+		
+		
 		return false;
 	}
 
@@ -68,7 +86,18 @@ public class SingleLinkedListGeneric <T> implements ListOpsIntGeneric <T> {
 	@Override
 	public int indexOf(T value) {
 		// TODO Auto-generated method stub
-		return 0;
+		if(!this.isEmpty()&&this.contains(value)) {
+			int x=0;
+			NodeOneLinkGeneric p = head;
+			while(p.getNext()!=tail||p.getData()!=value) {
+				if(p.getData()==value) {
+					return x;
+				}
+				x+=1;
+			}
+			return x;
+		}
+		return -1;
 	}
 
 	@Override
@@ -177,26 +206,28 @@ public class SingleLinkedListGeneric <T> implements ListOpsIntGeneric <T> {
 	@Override
 	public T removeAtIndex(int i) {
 		// TODO Auto-generated method stub
-		if(i<this.size()) {
+		if(i<this.size()&&!this.isEmpty()) { //if index is in the scope of the list
 			int j=0;
-			NodeOneLinkGeneric p = head;
-			while(j<i) {
+			NodeOneLinkGeneric p = head; 
+			while(j<i-1) { //parses through to node before removed
 				j+=1;
 				p.getNext();
 			}
-			return (T) p.getData();
+			Object returnVal = p.getNext().getData(); 
+			p.setNext(p.getNext().getNext()); //next of element before removed is set to element after removed...
+			return (T) returnVal; //returns value like pop
 		}
 		return null;
 	}
 
 	public T getAtIndex(int i) {
 		// TODO Auto-generated method stub
-		if(i<this.size()) {
+		if(i<this.size()&&!this.isEmpty()) {
 			int j=0;
 			NodeOneLinkGeneric p = head;
-			while(j<i) {
+			while(j<i) { //parses through to the node at index i
 				j+=1;
-				p.getNext();
+				p.getNext(); //gets the node next in the list
 			}
 			return (T) p.getData();
 		}
@@ -205,19 +236,19 @@ public class SingleLinkedListGeneric <T> implements ListOpsIntGeneric <T> {
 
 	@Override
 	public T setAtIndex(int i, T value) {
-		// TODO Auto-generated method stub
+		// TODO Auto-generated method stub 
 		
-		//not working yet 
-		
-		if(i<this.size()) {
+		if(i<this.size()&&!this.isEmpty()) {
 			int j=0;
 			NodeOneLinkGeneric p = head;
-			while(j<i-1) {
+			while(j<i) { //goes until p is the node at index i
 				j+=1;
 				p.getNext();
 			}
 			
-			return (T) p.getData();
+			p.setData(value);
+			
+			return value; 
 		}
 		return null;
 	}
@@ -225,16 +256,18 @@ public class SingleLinkedListGeneric <T> implements ListOpsIntGeneric <T> {
 	public T addAtIndex(int i, T value) {
 		// TODO Auto-generated method stub
 		
-		//not working yet 
-		
-		if(i<this.size()) {
+		if(i<this.size()&&!this.isEmpty()) {
 			int j=0;
 			NodeOneLinkGeneric p = head;
-			while(j<i) {
+			while(j<i-1) { //goes until p is the node before index i
 				j+=1;
 				p.getNext();
 			}
-			return (T) p.getData();
+			NodeOneLinkGeneric q = new NodeOneLinkGeneric(value); //is the new node
+			q.setNext(p.getNext()); //new node is inserted in the list before the node after p
+			p.setNext(q); //the node before q (from the while loop) is set to q
+			
+			return (T) q.getData(); //returns data
 		}
 		return null;
 	}

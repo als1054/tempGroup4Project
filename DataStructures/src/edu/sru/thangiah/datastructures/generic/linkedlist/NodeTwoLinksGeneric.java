@@ -21,6 +21,10 @@ public class NodeTwoLinksGeneric<T> {
 	{
 		return prev;
 	}
+	public NodeTwoLinksGeneric<T> getNext()
+	{
+		return next;
+	}
 	public void setPrev(NodeTwoLinksGeneric<T> prevElement)
 	{
 		prev = prevElement;

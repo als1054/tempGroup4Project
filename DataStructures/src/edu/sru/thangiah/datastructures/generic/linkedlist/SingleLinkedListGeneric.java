@@ -3,7 +3,7 @@ import edu.sru.thangiah.datastructures.generic.*;
 import edu.sru.thangiah.datastructures.generic.linkedlist.NodeOneLinkGeneric;
 import edu.sru.thangiah.datastructures.linkedlist.NodeOneLink;
 
-public class SingleLinkedListGeneric <T> implements ListOpsIntGeneric <T> {
+public class SingleLinkedListGeneric <T> extends AbstractLinkedListGeneric <T> {
 
 	private NodeOneLinkGeneric head; //points to first
 	private NodeOneLinkGeneric tail; //points to last

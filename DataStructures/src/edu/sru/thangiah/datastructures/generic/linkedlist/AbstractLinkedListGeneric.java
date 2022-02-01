@@ -2,7 +2,7 @@ package edu.sru.thangiah.datastructures.generic.linkedlist;
 
 import edu.sru.thangiah.datastructures.generic.ListOpsIntGeneric;
 
-public abstract class AbstractLinkedListGeneric implements ListOpsIntGeneric{
+public abstract class AbstractLinkedListGeneric<T> implements ListOpsIntGeneric<T>{
 
 	@Override
 	public int size() {
@@ -29,85 +29,85 @@ public abstract class AbstractLinkedListGeneric implements ListOpsIntGeneric{
 	}
 
 	@Override
-	public boolean contains(Object value) {
+	public boolean contains(T value) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public boolean add(Object value) {
+	public boolean add(T value) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public Object remove() {
+	public T remove() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public boolean addFirst(Object value) {
+	public boolean addFirst(T value) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public boolean addLast(Object value) {
+	public boolean addLast(T value) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public Object getFirst() {
+	public T getFirst() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Object getLast() {
+	public T getLast() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Object removeFirst() {
+	public T removeFirst() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Object removeLast() {
+	public T removeLast() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public int indexOf(Object value) {
+	public int indexOf(T value) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	public Object getAtIndex(int i) {
+	public T getAtIndex(int i) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Object setAtIndex(int i, Object value) {
+	public T setAtIndex(int i, T value) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Object removeAtIndex(int i) {
+	public T removeAtIndex(int i) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Object addAtIndex(int i, Object value) {
+	public T addAtIndex(int i, T value) {
 		// TODO Auto-generated method stub
 		return null;
 	}

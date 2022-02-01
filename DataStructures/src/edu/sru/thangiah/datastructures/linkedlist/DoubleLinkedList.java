@@ -6,7 +6,7 @@ package edu.sru.thangiah.datastructures.linkedlist;
  * !!! Code needs written for methods included
  */
 
-public class DoubleLinkedList {
+public class DoubleLinkedList extends AbstractLinkedList {
 	
 	private NodeTwoLinks head;
 	private NodeTwoLinks  tail;

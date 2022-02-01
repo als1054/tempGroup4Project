@@ -198,7 +198,7 @@ public class BinarySearchTree extends AbstractTree{
          //get the largest number in the tree
           BinaryTreeNode tmp = getSmallest(root);
           //get the prececessor of the largest number
-           tmp = root.successor(tmp.getData());
+           tmp = successor(root);
             return tmp.getData();
         }     
         return -1;
@@ -211,7 +211,7 @@ public class BinarySearchTree extends AbstractTree{
 //get the largest number in the tree
             BinaryTreeNode tmp = getLargest(root);
 //get the prececessor of the largest number
-           tmp = root.predecessor(tmp.getData());
+           tmp = predecessor(root, tmp.getData());
             return tmp.getData();
         }     
         return -1;

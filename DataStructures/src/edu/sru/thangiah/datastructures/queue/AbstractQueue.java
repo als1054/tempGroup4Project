@@ -56,7 +56,7 @@ public abstract class AbstractQueue implements ListOpsInt{
 	}
 
 	@Override
-	public int getLast() {
+	public Object getLast() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
@@ -65,7 +65,7 @@ public abstract class AbstractQueue implements ListOpsInt{
 	abstract public int removeFirst() ;
 	
 	@Override
-	public int getAtIndex(int i) {
+	public Object getAtIndex(int i) {
 		// TODO Auto-generated method stub
 		return 0;
 	}

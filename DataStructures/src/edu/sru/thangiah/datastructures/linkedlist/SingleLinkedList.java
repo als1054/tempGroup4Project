@@ -1,14 +1,11 @@
 package edu.sru.thangiah.datastructures.linkedlist;
 
-import edu.sru.thangiah.datastructures.linkedlist.NodeOneLink;
-
-
 /*
  * Generic SingleLinkedList 
  * Nodes remember the "next" node going down the list
  */
 
-public class SingleLinkedList {
+public class SingleLinkedList extends AbstractLinkedList {
 	
 	private NodeOneLink head; //points to first
 	private NodeOneLink tail; //points to last
@@ -21,7 +18,7 @@ public class SingleLinkedList {
 		tail = new NodeOneLink("Tail");
 		last = head;
 		first = head;
-		head.setNext(tail); //test
+		head.setNext(tail);
 	}
 	
 	public boolean isEmpty() {
@@ -34,8 +31,56 @@ public class SingleLinkedList {
 	 * linked list. The pointer "first" will always point to the node after the node pointed to by the head.
 	*/
 	
-	public void addNodeFirst(Object data)
+	
+	public int size()
 	{
+		int count = 0;
+		NodeOneLink ptr;
+		ptr = head;
+		if(!this.isEmpty())
+		{
+			while(ptr.getNext() != null)
+			{
+				count++;
+				ptr = ptr.getNext();
+			}
+		}
+		return count;
+	}
+	
+	public boolean addFirst(int value)
+	{
+		boolean returnVal = false;
+		NodeOneLink temp;
+		temp = new NodeOneLink(value);
+		//list is empty
+		if(head.getNext() == tail)
+		{
+			temp.setNext(first.getNext());
+			first = temp;
+			head.setNext(first);
+			//ground the node
+			temp = null;
+			returnVal = true;
+		}
+		else // there is an existing first node
+		{
+			temp.setNext(first);
+			first=temp;
+			head.setNext(first);
+			temp = null;
+			returnVal = true;
+		}
+
+		
+		
+		return returnVal;
+	}
+	
+	//Returns true upon successful addition of value
+	public boolean addNodeFirst(Object data)
+	{
+		boolean returnVal = false;
 		NodeOneLink temp;
 		temp = new NodeOneLink(data);
 		//the list is empty
@@ -46,19 +91,27 @@ public class SingleLinkedList {
 			first=temp;
 			head.setNext(first);
 			temp = null;
+			returnVal = true;
 		}
 		else //there is at least one node
 		{
 			temp.setNext(first);
 			first=temp;
 			head.setNext(first);
-			temp = null;		
+			temp = null;
+			returnVal = true;
+			
 		}
-		
+		return returnVal;
 	}
 	
+	public int removeFirst()
+	{
+		return removeNodeFirst();
+	}
 	/*
 	 * Remove the first node from the linked list
+	 * Returns node that is deleted
 	 */
 	public int removeNodeFirst()
 	{
@@ -83,11 +136,38 @@ public class SingleLinkedList {
 	lastnode inserted on the linked list. The pointer "last" will always be 
 	the one before the node pointed to by the tail.
 	*/
-	
-	public void addNodeLast(Object data)
+	public boolean addLast (int value)
 	{
+		boolean returnVal = false;
+		NodeOneLink temp;
+		temp = new NodeOneLink(value);
+		
+		if(head.getNext() == tail)
+		{
+			last = temp;
+			head.next = temp;
+			temp.next = tail;
+			temp = null;
+			returnVal = true;
+		}
+		else
+		{
+			temp.setNext(last.getNext());
+			last.setNext(temp);
+			last = temp;
+			temp = null;
+			returnVal = true;
+		}
+		
+		return returnVal;
+	}
+	
+	public boolean addNodeLast(Object data)
+	{
+		boolean returnVal = false;
 		NodeOneLink temp;
 		temp = new NodeOneLink(data);
+		
 		//the list is empty
 		if (head.getNext() == tail)
 		{			
@@ -96,6 +176,7 @@ public class SingleLinkedList {
 			head.next = temp;
 			temp.next = tail;	
 			temp = null;
+			returnVal = true;
 		}
 		else //there is at least one node
 		{
@@ -103,18 +184,37 @@ public class SingleLinkedList {
 			//or temp.setNext = tail;
 			last.setNext(temp);
 			last = temp;
-			temp = null;		
+			temp = null;	
+			returnVal = true;
 		}
-		
+		return returnVal;
 	}
 	
+	public int removeLast()
+	{
+		NodeOneLink ptr;
+		Object data = -1;
+		
+		if(!this.isEmpty()) {
+			data = last.getData();
+			ptr = head;
+			while (ptr.getNext() != last)
+			{
+				ptr = ptr.getNext();
+			}
+			ptr.setNext(tail);
+			last = ptr;
+			ptr = null;
+		}
+		return (int) data;
+	}
 	/*
 	 * Remove the last node from the linked list
 	 */
 	public Object removeNodeLast()
 	{
 		NodeOneLink ptr;			// pointer to navigate the LL
-		Object data = null;
+		Object data = -1;
 		
 		if (!this.isEmpty()) {		// always check if empty before performing operations
 			data = last.getData();	// preserving the data pointed to by last
@@ -130,11 +230,38 @@ public class SingleLinkedList {
 		return data;
 	}
 	
+	public Object getFirst()
+	{
+		return getFirstNode();
+	}
 	//Get the first value in the linked list without removing it 
 	public Object getFirstNode()
 	{
-		return head.getNext();
+		if(!this.isEmpty())
+		{
+			return head.getNext();
+		}
+		return -1;
 	}
+	public Object getLast()
+	{
+		NodeOneLink temp;
+		temp = head.getNext();
+	
+		if(!this.isEmpty())
+		{
+			while(temp.getNext().getData() != null)
+			{
+				temp = temp.getNext();
+			}
+			return temp;
+		}
+		return -1;
+	}
+	/*public int getLast()
+	{
+		return (int) last.getData();
+	}*/
 	public  String toString()
 	 {
 		NodeOneLink temp;
@@ -246,7 +373,31 @@ public class SingleLinkedList {
 			}
 			return -1;
 			}
+		public Object getAtIndex(int i)
+		{
+			int count = 0;
+			NodeOneLink ptr;
+			ptr = head;
+			if(!this.isEmpty())
+			{
+				while(ptr != null)
+				{
+					if(count == i)
+					{
+						return ptr;
+					}
+					count++;
+					ptr = ptr.getNext();
+				}
+			}
+			//function call points to a non-existent index in the list
+			return -1;
+		}
 		
+		/*public int setAtIndex(int i, int value)
+		{
+			Object index = getAtIndex(i);
+		}*/
 	
 	
 	 public static void main(String args[])
@@ -259,15 +410,13 @@ public class SingleLinkedList {
 		 */
 		 
 		 SingleLinkedList singleLL = new SingleLinkedList();
-		 int i=2;
-		 String j="##332";
-		 singleLL.addNodeFirst(j);
+		 singleLL.addNodeFirst(4);
 		 System.out.println(singleLL);
-		 singleLL.addNodeFirst(i);
+		 singleLL.addNodeFirst(5);
 		 System.out.println(singleLL);
 		 singleLL.addNodeFirst(6);
 		 System.out.println(singleLL);
-		 singleLL.delPrev1(j);
+		 singleLL.delPrev1(4);
 		 //singleLL.addNodeFirst("a");
 		 //singleLL.addNodeFirst("b");
 		 System.out.println(singleLL);

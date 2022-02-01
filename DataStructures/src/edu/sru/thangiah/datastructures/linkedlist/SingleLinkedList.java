@@ -21,7 +21,7 @@ public class SingleLinkedList {
 		tail = new NodeOneLink("Tail");
 		last = head;
 		first = head;
-		head.setNext(tail);
+		head.setNext(tail); //test
 	}
 	
 	public boolean isEmpty() {

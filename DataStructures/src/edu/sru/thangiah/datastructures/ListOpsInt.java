@@ -20,7 +20,7 @@ public interface ListOpsInt extends BaseOpsInt {
 	public Object getFirst();
 	
 	//get the last value of the structure
-	public int getLast();
+	public Object getLast();
 	
 	//remove the first value of the structure
 	public int removeFirst();
@@ -29,7 +29,7 @@ public interface ListOpsInt extends BaseOpsInt {
 	public int removeLast();
 	
 	//get the value at index i
-	public int getAtIndex(int i);
+	public Object getAtIndex(int i);
 	
 	//at index i, put the value in the structure
 	public int setAtIndex(int i, int value);

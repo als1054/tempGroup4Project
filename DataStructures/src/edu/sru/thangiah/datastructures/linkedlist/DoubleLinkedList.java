@@ -50,6 +50,56 @@ public class DoubleLinkedList extends AbstractLinkedList {
 		}
 		return true;
 	}
+	public boolean addFirst (int value)
+	{
+		boolean returnVal = false;
+		NodeTwoLinks temp;
+		temp = new NodeTwoLinks(value);
+		//list is empty
+		if(isEmpty())
+		{
+			temp.setPrev(head);
+			temp.setNext(head.getNext());
+			temp.getNext().setPrev(temp);
+			head.setNext(temp);
+			//ground instance
+			temp = null;
+			returnVal = true;
+		}
+		//There is already an element in the list
+		else
+		{
+	
+		}
+		return returnVal;
+	}
+	
+	public boolean addLast(int data)
+	{
+		boolean returnVal = false;
+		NodeTwoLinks temp;
+		temp = new NodeTwoLinks(data);
+		
+		if(isEmpty())
+		{
+			head.setNext(temp);
+			temp.setNext(tail);
+			tail.setPrev(temp);
+			temp.setPrev(head);
+			temp = null;
+			returnVal = true;
+		}
+		else
+		{
+			tail.getPrev().setNext(temp);
+			temp.setPrev(tail.getPrev());
+			tail.setPrev(temp);
+			temp.setNext(tail);
+			temp = null;
+			returnVal = true;
+		}
+		return returnVal;
+	}
 	
 	/*
 	 * Remove the first node from the linked list

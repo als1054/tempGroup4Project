@@ -33,14 +33,13 @@ public class SingleLinkedListGeneric <T> extends AbstractLinkedListGeneric <T> {
 	@Override
 	public boolean isEmpty() {
 		if(head.getNext()==tail) {
-			return true;
+			return true; //if the next node for head is tail then it is empty
 		}
 		return false;
 	}
 	
 	@Override
 	public boolean isFull() {
-		// TODO Auto-generated method stub
 		
 		return false;
 	}
@@ -48,8 +47,8 @@ public class SingleLinkedListGeneric <T> extends AbstractLinkedListGeneric <T> {
 
 	@Override
 	public boolean clear() {
-		head.setNext(last);
-		return true;
+		head.setNext(last); //might loop thru and ground all the nodes in next installment
+		return true; 
 	}
 
 	@Override
@@ -58,11 +57,11 @@ public class SingleLinkedListGeneric <T> extends AbstractLinkedListGeneric <T> {
 		NodeOneLinkGeneric p = new NodeOneLinkGeneric(head.getNext());
 		if(!this.isEmpty()) {
 			if(tail.getData()==value||head.getData()==value) 
-				return true;
+				return true; //if head or tail node is value, since next while skips head.
 			
 			while(p.getNext()!=tail || p.getNext().getData()!=value) {
 				p=p.getNext();
-				if(p.getData()==value)
+				if(p.getData()==value) //if the next node's data is value return true
 					return true;
 			}
 		}
@@ -73,7 +72,7 @@ public class SingleLinkedListGeneric <T> extends AbstractLinkedListGeneric <T> {
 
 	@Override
 	public boolean add(T value) {
-		return false;
+		return false; 
 	}
 
 	@Override
@@ -159,7 +158,7 @@ public class SingleLinkedListGeneric <T> extends AbstractLinkedListGeneric <T> {
 
 	@Override
 	public T getLast() {
-		// TODO Auto-generated method stub
+
 		NodeOneLinkGeneric p;
 		p = head.getNext();
 	
@@ -176,7 +175,7 @@ public class SingleLinkedListGeneric <T> extends AbstractLinkedListGeneric <T> {
 
 	@Override
 	public T removeFirst() {
-		// TODO Auto-generated method stub
+
 		Object info = head.getNext().getData();
 		head.setNext(head.getNext().getNext());
 		return (T) info;
@@ -184,8 +183,7 @@ public class SingleLinkedListGeneric <T> extends AbstractLinkedListGeneric <T> {
 
 	@Override
 	public T removeLast() {
-		// TODO Auto-generated method stub
-		if(head.getNext()!=tail&&head.getNext().getNext()!=tail) {
+\		if(head.getNext()!=tail&&head.getNext().getNext()!=tail) {
 			NodeOneLinkGeneric p = head.getNext();
 			while(p.getNext().getNext().getNext()!=tail) {
 				p=p.getNext();
@@ -203,8 +201,7 @@ public class SingleLinkedListGeneric <T> extends AbstractLinkedListGeneric <T> {
 
 	@Override
 	public T removeAtIndex(int i) {
-		// TODO Auto-generated method stub
-		if(i<this.size()&&!this.isEmpty()) { //if index is in the scope of the list
+\		if(i<this.size()&&!this.isEmpty()) { //if index is in the scope of the list
 			int j=0;
 			NodeOneLinkGeneric p = head; 
 			while(j<i-1) { //parses through to node before removed
@@ -219,7 +216,6 @@ public class SingleLinkedListGeneric <T> extends AbstractLinkedListGeneric <T> {
 	}
 
 	public T getAtIndex(int i) {
-		// TODO Auto-generated method stub
 		if(i<this.size()&&!this.isEmpty()) {
 			int j=0;
 			NodeOneLinkGeneric p = head;
@@ -234,7 +230,6 @@ public class SingleLinkedListGeneric <T> extends AbstractLinkedListGeneric <T> {
 
 	@Override
 	public T setAtIndex(int i, T value) {
-		// TODO Auto-generated method stub 
 		
 		if(i<this.size()&&!this.isEmpty()) {
 			int j=0;
@@ -252,8 +247,6 @@ public class SingleLinkedListGeneric <T> extends AbstractLinkedListGeneric <T> {
 	}
 
 	public T addAtIndex(int i, T value) {
-		// TODO Auto-generated method stub
-
 		
 		if(i<this.size()&&!this.isEmpty()) {
 			int j=0;

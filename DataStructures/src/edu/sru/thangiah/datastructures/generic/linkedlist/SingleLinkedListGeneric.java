@@ -2,6 +2,7 @@ package edu.sru.thangiah.datastructures.generic.linkedlist;
 import edu.sru.thangiah.datastructures.generic.*;
 import edu.sru.thangiah.datastructures.generic.linkedlist.NodeOneLinkGeneric;
 import edu.sru.thangiah.datastructures.linkedlist.NodeOneLink;
+import edu.sru.thangiah.datastructures.linkedlist.SingleLinkedList;
 
 public class SingleLinkedListGeneric <T> extends AbstractLinkedListGeneric <T> {
 
@@ -21,11 +22,28 @@ public class SingleLinkedListGeneric <T> extends AbstractLinkedListGeneric <T> {
 	
 	@Override
 	public int size() {
-		NodeOneLinkGeneric p = new NodeOneLinkGeneric(head.getNext());
+		/*NodeOneLinkGeneric p = new NodeOneLinkGeneric(head.getNext());
 		int count=0; 
+		if(head.getNext()==tail) {
+			return count;
+		}
+		
 		while(p.getNext()!=tail) {
 			count +=1;
 			p=p.getNext();
+		}
+		return count;
+		*/
+		int count = 0;
+		NodeOneLinkGeneric ptr;
+		ptr = head.getNext();
+		if(!this.isEmpty())
+		{
+			while(ptr.getNext() != null)
+			{
+				count++;
+				ptr = ptr.getNext();
+			}
 		}
 		return count;
 	}
@@ -164,8 +182,12 @@ public class SingleLinkedListGeneric <T> extends AbstractLinkedListGeneric <T> {
 	
 		if(!this.isEmpty())
 		{
-			while(p.getNext().getData() != null)
+			while(p.getNext() != null)
 			{
+				if(p.getNext() == tail)
+				{
+					break;
+				}
 				p = p.getNext();
 			}
 			return (T) p.getData();
@@ -183,7 +205,7 @@ public class SingleLinkedListGeneric <T> extends AbstractLinkedListGeneric <T> {
 
 	@Override
 	public T removeLast() {
-\		if(head.getNext()!=tail&&head.getNext().getNext()!=tail) {
+		if(head.getNext()!=tail&&head.getNext().getNext()!=tail) {
 			NodeOneLinkGeneric p = head.getNext();
 			while(p.getNext().getNext().getNext()!=tail) {
 				p=p.getNext();
@@ -201,7 +223,7 @@ public class SingleLinkedListGeneric <T> extends AbstractLinkedListGeneric <T> {
 
 	@Override
 	public T removeAtIndex(int i) {
-\		if(i<this.size()&&!this.isEmpty()) { //if index is in the scope of the list
+		if(i<this.size()&&!this.isEmpty()) { //if index is in the scope of the list
 			int j=0;
 			NodeOneLinkGeneric p = head; 
 			while(j<i-1) { //parses through to node before removed
@@ -289,6 +311,30 @@ public class SingleLinkedListGeneric <T> extends AbstractLinkedListGeneric <T> {
 		this.first = first;
 	}
 	
-	
+	 public static void main(String args[])
+	 {
+		 
+		 /*SingleLinkedList singleLL = new SingleLinkedList();		 
+		 singleLL.addNodeLast("a");
+		 singleLL.addNodeLast("b");
+		 System.out.println(singleLL);
+		 */
+		 
+		 SingleLinkedListGeneric singleLL = new SingleLinkedListGeneric();
+		 System.out.println(singleLL.getAtIndex(0));
+		 singleLL.addFirst(4);
+		 System.out.println(singleLL);
+		 singleLL.addFirst(5);
+		 System.out.println(singleLL);
+		 System.out.println(singleLL.getAtIndex(0));
+		 singleLL.addFirst(6);
+		 System.out.println(singleLL);
+		 System.out.println(singleLL.size());
+		 //singleLL.addNodeFirst("a");
+		 //singleLL.addNodeFirst("b");
+		 System.out.println(singleLL);
+		 System.out.println(singleLL.getFirst());
+		 System.out.println(singleLL.getLast());
+	 }
 
 }

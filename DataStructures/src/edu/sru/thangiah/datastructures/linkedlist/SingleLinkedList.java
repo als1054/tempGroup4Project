@@ -31,12 +31,12 @@ public class SingleLinkedList extends AbstractLinkedList {
 	 * linked list. The pointer "first" will always point to the node after the node pointed to by the head.
 	*/
 	
-	
+	//head and tail do not store any values, and shouldn't be counted in the size of the list
 	public int size()
 	{
 		int count = 0;
 		NodeOneLink ptr;
-		ptr = head;
+		ptr = head.getNext();
 		if(!this.isEmpty())
 		{
 			while(ptr.getNext() != null)
@@ -379,6 +379,7 @@ public class SingleLinkedList extends AbstractLinkedList {
 			}
 			return -1;
 			}
+		//Unlike Arrays, linkedlists are not 0 indexed, meaning that index 1 is always the first element in the list
 		public Object getAtIndex(int i)
 		{
 			int count = 0;
@@ -463,12 +464,15 @@ public class SingleLinkedList extends AbstractLinkedList {
 		 */
 		 
 		 SingleLinkedList singleLL = new SingleLinkedList();
+		 System.out.println(singleLL.getAtIndex(0));
 		 singleLL.addNodeFirst(4);
 		 System.out.println(singleLL);
 		 singleLL.addNodeFirst(5);
 		 System.out.println(singleLL);
+		 System.out.println(singleLL.getAtIndex(0));
 		 singleLL.addNodeFirst(6);
 		 System.out.println(singleLL);
+		 System.out.println(singleLL.size());
 		 singleLL.delPrev1(4);
 		 //singleLL.addNodeFirst("a");
 		 //singleLL.addNodeFirst("b");

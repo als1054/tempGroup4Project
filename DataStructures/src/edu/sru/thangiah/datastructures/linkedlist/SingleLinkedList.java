@@ -1,6 +1,3 @@
-
-
-
 package edu.sru.thangiah.datastructures.linkedlist;
 
 /*

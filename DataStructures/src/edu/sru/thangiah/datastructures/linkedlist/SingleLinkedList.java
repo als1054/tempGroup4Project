@@ -189,23 +189,30 @@ public class SingleLinkedList extends AbstractLinkedList {
 		}
 		return returnVal;
 	}
-	
+	//iterate through the list to find the last node
 	public int removeLast()
 	{
 		NodeOneLink ptr;
 		Object data = -1;
-		
+		//base condition to make sure list isn't empty
 		if(!this.isEmpty()) {
+			//last holds the last element in list
 			data = last.getData();
+			//used to iterate through list
 			ptr = head;
+			
+			//iterate until last element is reached
 			while (ptr.getNext() != last)
 			{
 				ptr = ptr.getNext();
 			}
+			//set the next link to the tail (end of list)
 			ptr.setNext(tail);
+			//remove the last element and ground the ptr.
 			last = ptr;
 			ptr = null;
 		}
+		//returns the data of the element that was removed
 		return (int) data;
 	}
 	/*
@@ -229,7 +236,6 @@ public class SingleLinkedList extends AbstractLinkedList {
 		
 		return data;
 	}
-	
 	public Object getFirst()
 	{
 		return getFirstNode();
@@ -237,19 +243,23 @@ public class SingleLinkedList extends AbstractLinkedList {
 	//Get the first value in the linked list without removing it 
 	public Object getFirstNode()
 	{
+		//first element in linkedList is the next value after the head
 		if(!this.isEmpty())
 		{
 			return head.getNext();
 		}
 		return -1;
 	}
+	//return the last element in the linked list
 	public Object getLast()
 	{
+		//set a temp node to iterate through the linked list
 		NodeOneLink temp;
 		temp = head.getNext();
-	
+		//ensure list isn't empty
 		if(!this.isEmpty())
 		{
+			//iterate until we reach the last element
 			while(temp.getNext().getData() != null)
 			{
 				temp = temp.getNext();
@@ -258,10 +268,6 @@ public class SingleLinkedList extends AbstractLinkedList {
 		}
 		return -1;
 	}
-	/*public int getLast()
-	{
-		return (int) last.getData();
-	}*/
 	public  String toString()
 	 {
 		NodeOneLink temp;
@@ -394,10 +400,57 @@ public class SingleLinkedList extends AbstractLinkedList {
 			return -1;
 		}
 		
-		/*public int setAtIndex(int i, int value)
+		public int setAtIndex(int i, int value)
 		{
-			Object index = getAtIndex(i);
-		}*/
+			if(i<this.size() && !this.isEmpty()) // index is in the scope of the list and list isn't empty
+			{
+				int j = 0;
+				NodeOneLink temp = head;
+				while(j<i)//
+				{
+					j+=1;
+					temp = temp.getNext();
+				}
+				temp.setData(value);
+				return value;
+			}
+			return -1;
+		}
+		
+		public int removeAtIndex(int i)
+		{
+			if(i<this.size() && !this.isEmpty()) // index is in the scope of the list and list isn't empty
+			{
+				int j = 0;
+				NodeOneLink temp = head;
+				while(j<i-1)//iterate until one before index to be removed
+				{
+					j+=1;
+					temp = temp.getNext();
+				}
+				Object returnVal = temp.getNext().getData();
+				temp.setNext(temp.getNext().getNext()); //next element before removed is set to element after removed
+				return (int) returnVal; //value removed is returned
+			}
+			return -1;
+		}
+		
+		public int addAtIndex(int i, int value)
+		{
+			if(i<this.size() && !this.isEmpty())
+			{
+				int j = 0;
+				NodeOneLink temp = head;
+				while(j<i)//
+				{
+					j+=1;
+					temp = temp.getNext();
+				}
+				temp.setData(value);
+				return value;
+			}
+			return -1;
+		}
 	
 	
 	 public static void main(String args[])

@@ -260,8 +260,12 @@ public class SingleLinkedList extends AbstractLinkedList {
 		if(!this.isEmpty())
 		{
 			//iterate until we reach the last element
-			while(temp.getNext().getData() != null)
+			while(temp.getNext()!= null)
 			{
+				if(temp.getNext() == tail)
+				{
+					break;
+				}
 				temp = temp.getNext();
 			}
 			return temp;
@@ -477,6 +481,8 @@ public class SingleLinkedList extends AbstractLinkedList {
 		 //singleLL.addNodeFirst("a");
 		 //singleLL.addNodeFirst("b");
 		 System.out.println(singleLL);
+		 System.out.println(singleLL.getFirst());
+		 System.out.println(singleLL.getLast());
 	 }
 	 
 	
